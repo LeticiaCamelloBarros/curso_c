@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+
+     float Far_temp ;
+ float temp_cel;
+ printf("Qual a sua temp_celeratura ? : ");
+ scanf("%f",&Far_temp);
+ temp_cel = 5 * ((Far_temp-32)/9);
+ printf("a temperatura convertida de fareight  para celcius é : %f",temp_cel );
+ return 0 
+
+}
