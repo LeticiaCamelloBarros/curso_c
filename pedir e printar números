@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    // peça dois números ; um inteiro e outro do tipo flutuante ; e mostre-os no console 
+ int inti ;
+ float floati ;
+ printf("numero int : ");
+ scanf("%d",&inti);
+ printf("numero float : ");
+ scanf("%f",&floati);
+ printf("a variavel int  %d",inti);
+ printf("\na variavel float %.3f",floati) ;
+    
+}
