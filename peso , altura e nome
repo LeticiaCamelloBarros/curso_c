@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+
+
+// peça o nome , a altura e o peso de uma pessoa e depois print-os na tela 
+  float peso , altura ;
+  char nome[5000];
+  printf("qual o seu nome ? : ");
+  scanf("%s",nome);
+  printf("\nqual a sua altura ? ");
+  scanf("%f",&altura);
+  printf("\nqual o seu peso? :");
+  scanf("%f",&peso) ;
+  printf("o seu peso C) %.1f",peso);
+  printf("\na sua altura C) %.2f",altura );
+  printf("\no seu nome C) %s",nome);    
+}
