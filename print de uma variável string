@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main()
+{
+	char nome[50];
+	printf("Entre com o seu nome : ");
+	scanf("%s",nome);
+	printf("o nome informado foi :%s",nome);
+    
+}
