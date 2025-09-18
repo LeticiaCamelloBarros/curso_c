@@ -1,0 +1,38 @@
+/******************************************************************************
+Q9. Faça um programa para a leitura de duas avs parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar:
+A mensagem "Aprovado com Distinção", se a média for igual a dez.
+A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+A mensagem "final", se a média for maior do que três;
+A mensagem "reprovado", se a média for menor do que três;
+*******************************************************************************/
+#include <stdio.h>
+#include <ctype.h>
+int main()
+{
+float av1 , av2 , media ; 
+printf("qual a sua nota  da av1 ? ");
+scanf("%f",&av1);
+printf("qual a sua nota da av2 ? ");
+scanf("%f",&av2);
+media = (av1 + av2) / 2 ;
+if (media == 10)
+{
+    printf("Aprovado com Distinção");
+}
+else if (10>media && media >= 7)
+{
+    printf("Aprovado");
+}
+else if (7 > media && media  >= 3 )
+{
+    printf("final");
+}
+else if (media < 3)
+{
+    printf("reprovado");
+}
+else 
+{
+    printf("nota inválida .(nota deve ser no maximo igual à 10 ");
+}
+}
