@@ -1,0 +1,31 @@
+/******************************************************************************
+### Q8. Faça um Programa que peça dois números e imprima o maior deles.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+float n1,n2 , maior , menor ; 
+
+printf("insira o valor 1  :");
+scanf("%f",&n1);
+printf("insira o valor 2  :");
+scanf("%f",&n2);
+
+if (n1 > n2  ) 
+{
+ printf("primeiro valor maior que o segundo ");
+
+}
+else if  (n1 == n2 )
+//  o else if é tipo o elif em python 
+{
+    printf("os dois valores são iguais");
+}
+else
+{
+   printf("o segundo valor é maior que o primeiro") ;
+}
+
+}
