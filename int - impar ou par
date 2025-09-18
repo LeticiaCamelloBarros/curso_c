@@ -1,0 +1,23 @@
+/******************************************************************************
+Q7. Faça um Programa que peça um número inteiro e determine se ele é par ou impar.
+Dica: utilize o operador módulo (resto da divisão).
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    
+int inteiro ;
+printf("qual o número que você deseja verificar ? :");
+scanf("%d",&inteiro);
+if (inteiro % 2 == 0)
+{
+   printf("o número é par")    ;
+}
+else
+{
+   printf("o número é impar")    ;
+}
+
+}
