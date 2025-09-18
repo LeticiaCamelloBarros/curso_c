@@ -1,5 +1,6 @@
 /******************************************************************************
-
+faça um programa que peça para o usuário inserir um valor entre 1.000 e 10.000 , 
+se ele inserir digite "muito bem" , senão peça para ele inserir o número de novo , até ele conseguir inserir um número nesse intervalo 
 
 *******************************************************************************/
 #include <stdio.h>
