@@ -1,0 +1,21 @@
+/******************************************************************************
+
+peça para o usuário digitar um número até ele digitar 0 . 
+DEpois que ele digitar 0 , mostre quantos numeros ele digitou 
+
+*******************************************************************************/
+#include <stdio.h>
+
+
+int main()
+{
+int numero , numero_de_vezes ;
+numero_de_vezes = 0 ;
+while (numero != 0) 
+{
+printf("digite um número : ");
+scanf("%d",&numero);
+   { numero_de_vezes = numero_de_vezes + 1 ;}
+}
+printf("você digitou números diferentes de zero %d vezes",numero_de_vezes);
+}
