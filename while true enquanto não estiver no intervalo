@@ -9,7 +9,7 @@ se ele inserir digite "muito bem" , senão peça para ele inserir o número de n
 int main()
 {
   float numero ;
-  int cont = 0;
+  
   while( True  )
     {
     printf("insira um número entre 1.000 e 10.000");
