@@ -1,0 +1,24 @@
+/******************************************************************************
+crie um código que usa função para guardar numa variável o resultado de uma soma 
+
+*******************************************************************************/
+#include <stdio.h>
+
+int sum (int x, int y)
+{
+    int result ; 
+	result = x + y;
+	return result;
+}
+int main()
+
+{
+	int n1, n2,soma ;
+	printf("insira o primeiro numero :");
+	scanf("%d",&n1);
+	printf("insira o segundo  numero :");
+	scanf("%d",&n2);
+
+	soma = sum(n1,n2);
+	printf("O resultado da soma  %d",soma);
+}
