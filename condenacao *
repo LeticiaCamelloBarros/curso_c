@@ -1,0 +1,63 @@
+/******************************************************************************
+Faça um programa que faça 5 perguntas para uma pessoa sobre um crime.
+As perguntas são: "Telefonou para a vítima?" "Esteve no local do crime?"
+"Mora perto da vítima?" "Devia para a vítima?" "Já trabalhou com a vítima?"
+O programa deve no final emitir uma classificação sobre a participação da pessoa no crime.
+Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", 
+entre 3 e 4 como "Cúmplice" e 5 como "Assassino".
+Caso contrário, ele será classificado como "Inocente".
+
+*******************************************************************************/
+#include <stdio.h>
+# define 1 's'
+int main()
+{
+    
+ bool escolha ; 
+ int peso_juri ; 
+ char condenacao[500] ;
+ peso_juri = 0 ;
+ printf("Telefonou para a vítima?");
+ scanf("%c"&escolha);
+ if (escolha == 's')
+ {
+     peso_juri ++;
+ }
+ printf("Esteve no local do crime?");
+ scanf("%c"&escolha);
+ if (escolha == 's')
+ {
+     peso_juri ++;
+ }
+ printf("Mora perto da vítima?");
+ scanf("%c"&escolha);
+ if (escolha == 's')
+ {
+     peso_juri ++;
+ }
+ printf("Devia para a vítima?");
+ scanf("%c"&escolha);
+ if (escolha == 's')
+ {
+     peso_juri ++;
+ }
+ printf("Já trabalhou com a vítima?");
+ scanf("%c"escolha);
+ if (escolha == 's')
+ {
+     peso_juri ++;
+ }
+ if (peso_juri == 2)
+ {
+     printf("você é suspeito");
+ }
+ else if (peso_juri ==3 && peso_juri == 4)
+ {
+     printf("você é cumplice");
+ }
+ else if (peso_juri == 5 )
+ {
+     printf("você é assasino ");
+ }
+ 
+}
