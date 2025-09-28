@@ -1,0 +1,13 @@
+
+ 
+
+	printf("Diff beetween '%c' and '%c' is : %d\n", 'c', 'a', 2);
+	printf("Diff beetween '%c' and '%c' is : %d\n", 'a', 'c', -2);
+	return 0;
+
+
+ou / or 
+
+	printf("Diff beetween '%c' and '%c' is : %d\n", 'c', 'a','c'-'a');
+	printf("Diff beetween '%c' and '%c' is : %d\n", 'a', 'c', 'a'-'c');
+	return 0;
