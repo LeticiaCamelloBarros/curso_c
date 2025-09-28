@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main()
+{
+	int daysofw;
+	float pi ; 
+	scanf("%d\n",&daysofw);
+	scanf("%f",&pi);
+	printf("\nHow many days in the week: %d",daysofw);
+	printf("\nThe value of Pi to two points: %f",pi);
+	printf("Pi value is %1.8f",pi);
+	return 0;
+}
