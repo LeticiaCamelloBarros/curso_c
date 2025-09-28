@@ -1,0 +1,12 @@
+# the task text will be in the comment of the commit 
+
+#include <stdio.h>
+
+int main(void) 
+{
+	int n = -3,posit;
+	posit = -n;
+    if( n < 0 )
+       {printf("The absolute value of %d is %d",n,posit);}
+	return 0;
+}
