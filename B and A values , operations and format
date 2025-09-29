@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    float valueA,valueB;
+    printf("What is the value of A :");
+    scanf("%f",&valueA);
+    printf("What is the value of B :");
+    scanf("%f",&valueB);
+    
+    printf("%.6f + %.6f = %.6f\n",valueA,valueB,valueA+valueB);
+    printf("%.6f + %.6f = %.6f\n",valueA,valueB,valueA-valueB);
+    printf("%.6f + %.6f = %.6f\n",valueA,valueB,valueA*valueB);
+	/* your code */
+	return 0;
+}
