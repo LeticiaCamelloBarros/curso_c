@@ -1,0 +1,44 @@
+int main()
+{
+	int dayofof ;
+	printf("insert here the dayof of the week");
+	scanf("%d",dayofof);
+	if (dayofof>7)
+	{
+	    printf("There is no such dayof: %d. Input value must be from 0 to 6.",dayofof)
+	}
+	else : 
+       if (dayof ==1)
+       {
+           printf("The dayof of week is: Mondayof")
+       }
+       else if (dayof == 2)
+       {
+           printf("The dayof of week is: Tuersdayof")
+           
+       }
+       else if (dayof == 3)
+       {
+           printf("The dayof of week is: wednesdayof")
+       }
+       else if (dayof == 4)
+       {
+           printf("The dayof of week is: Thursdayof ")
+       }
+       else if (dayof == 5 )
+       {
+           printf("The dayof of week is Fridayof")
+           
+       }
+       else if (dayof == 6 )
+       {
+           printf("The dayof of week is Saturdayof")
+           
+       }
+       else if (dayof == 7)
+       {
+           printf("The dayof of the week is Sundayof")
+       }
+	return 
+	0;
+}
