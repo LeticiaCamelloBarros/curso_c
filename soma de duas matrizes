@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main()
+{
+int i = 0 ;
+int j = 0 ;
+int mA[3][2];
+int mB[3][2];
+int mC[3][2];
+printf("matriz A : ");
+printf("\n");
+for(i=0;i<3;i++){
+    for(j=0;j<2;j++){
+    scanf("%d",&mA[i][j]);
+    printf(" ");
+    }
+    printf("\n");
+}
+printf("matriz B : ");
+printf("\n");
+for(i=0;i<3;i++)
+{
+    for(j=0;j<2;j++)
+    {
+    scanf("%d",&mB[i][j]);
+    printf(" ");
+    }
+    printf("\n");
+}
+printf("matriz C : ");
+printf("\n");
+for(i=0;i<3;i++)
+{
+    for(j=0;j<2;j++)
+    {
+    mC[i][j] = mA[i][j]+mB[i][j];
+    printf(" ");
+    }
+    printf("\n");
+}
+
+for(i=0;i<3;i++){
+    for(j=0;j<2;j++){
+        printf("%d",mC[i][j]);
+        printf(" ");
+    }
+    printf("\n");
+}
+}
