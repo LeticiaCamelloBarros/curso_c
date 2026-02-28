@@ -12,6 +12,10 @@ Repositório que guarda meus códigos na lingagem c .
     * https://www.arquivodecodigos.com.br/dicas_truques_categoria2.php?linguagem=15&categoria1=41&categoria2=35
     * https://www.docsity.com/pt/docs/exercicios-resolvidos-em-c-matrizes/10160055/
     * https://www.docsity.com/pt/docs/exercicios-resolvidos-em-c-vetores/10160051/
+    * https://pt.scribd.com/document/840843870/Exemplo-matrizes-em-c
+    * https://www.cprogressivo.net/2013/03/Exercicios-sobre-vetores-e-matrizes-em-C.html
+    * https://pt.wikiteka.com/anotacoes/exercicios-matrizes-linguagem-c-guia-pratico/
+    * https://danilogiacobo.eti.br/UTFPR/FPC/M_ListaExercicio_03.pdf
   * funções :
     * https://linguagemc.com.br/exercicios-resolvidos-sobre-funcoes-em-c/
     * https://www.cprogressivo.net/2013/03/Exercicios-sobre-funcoes-em-linguagem-de-programacao-C.html
