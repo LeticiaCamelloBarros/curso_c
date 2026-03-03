@@ -1,0 +1,42 @@
+/***************************************************************************
+
+*******************************************************************************/
+#include <stdio.h>
+int soma_up_indent (int N,int m[N][N]);
+int main()
+{
+//inicio da main 
+int i = 0 ;
+int j = 0 ; 
+int N = 0 ;
+int soma = 0 ;
+printf("qual o tamanho da sua matriz quadrada ? : ");
+scanf("%d",&N);
+int m[N][N];
+int ordem = 0 ;
+for (i=0;i<N;i++){
+    for(j=0;j<N;j++){
+        ordem = ordem + 1; // ordem é feito só para ajudar a pessoa a saber quantos elementos 
+        //faltam para acabar a leitura de entrada
+        printf("digite o %d elemento da sua matriz",ordem);
+        scanf("%d",&m[i][j]);
+    }
+}
+soma = soma_up_indent(N,m);
+printf("%d",soma);
+//fim da main
+}
+
+int soma_up_indent(int N ,int m[N][N]){
+int i = 0 ;
+int j = 0 ;
+int soma = 0 ;
+    for (i=0;i<N;i++){
+        for(j=0;j<N;j++){
+            if (i < j ){
+                soma += m[i][j];
+            }
+        }
+    }
+    return soma;
+}
