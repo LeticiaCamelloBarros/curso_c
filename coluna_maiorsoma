@@ -1,0 +1,52 @@
+/******************************************************************************
+
+(Difícil) Implemente uma função que receba um inteiro N e uma matriz N x N de inteiros e
+retorne o índice da coluna com maior soma. Em caso de empate, retornar a primeira encontrada.
+Depois, implemente a main() que imprime o resultado.
+
+*******************************************************************************/
+#include <stdio.h>
+int indcolmaior(int N,int matriz[N][N]);
+int main()
+{
+//inicio da main 
+int N;
+printf("qual o tamanho da sua matriz ? :");
+scanf("%d",&N);
+int matriz[N][N];
+int i = 0 ;
+int j = 0 ;
+printf("digite os elementos da nossa matriz");
+for (i=0;i<N;i++){
+    for(j = 0 ; j < N ; j++){
+        scanf("%d",&matriz[i][j]);
+    }
+}
+int indice = indcolmaior(N,matriz);
+printf("%d",indice);
+//fim da main    
+}
+int indcolmaior(int N,int matriz[N][N]){
+//inicio da função
+int i = 0 ; 
+int j = 0 ;
+int vetor[N];
+//vetor com a soma das colunas
+for (j=0;j<N;j++){
+    vetor[j] = 0;
+}
+//iniciando o vetor das colunas com 0
+printf("digite os elementos da nossa matriz\n");
+for (i=0;i<N;i++){
+    for(j = 0 ; j < N ; j++){
+      vetor[j] += matriz[i][j];  
+    }
+}
+int ind_maior = 0 ; 
+for(i=0;i<N;i++){
+    if (vetor[i] > ind_maior) {
+        ind_maior = i;
+    }
+}
+return ind_maior;
+// fim da função
