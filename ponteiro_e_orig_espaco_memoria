@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main()
+{
+char bla = 'b';
+char *pBla = &bla;
+printf("%p",bla);
+printf("\n");
+printf("%p",*pBla);
+
+}
