@@ -1,0 +1,42 @@
+
+#include <stdio.h>
+int funcao(int N,int matriz[N][N]);
+int main()
+{
+int N ; 
+printf("digite o tamanho da sua matriz : \n");
+scanf("%d",&N);
+int matriz[N][N];
+int i = 0;int j=0;
+for(i=0;i<N;i++){
+    for(j=0;j<N;j++){
+       printf("digite o valor do elemento matriz[%d][%d]",i,j);
+       scanf("%d",&matriz[i][j]);
+    }
+}
+//fim da main
+int retorno = funcao(N,matriz);
+printf("%d",retorno);
+}
+int funcao(int N,int matriz[N][N]){
+   int linhas_cor = 0;
+   int i = 0 ; int j = 0;
+   for(i=0;i<N;i++){
+   int elementos_cor = 0 ;
+    for(j=0;j<N-1;j++){
+      if (matriz[i][j]<matriz[i][j+1]){
+          elementos_cor += 1 ;
+      }
+
+    }
+    if (elementos_cor == N-1){
+        //para N elementos , temos N - 1 pares adjacentes .
+        linhas_cor += 1 ;
+    }
+}
+if( linhas_cor == N ){
+    return 1;
+}else {
+    return 0;
+}
+}
