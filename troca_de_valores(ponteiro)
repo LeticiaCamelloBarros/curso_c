@@ -14,9 +14,9 @@ int main()
 int a = 3; 
 int b = 4;
 trocar(&a,&b);
-printf("%d",*&a);
+printf("%d",a);
 printf("\n");
-printf("%d",*&b);
+printf("%d",b);
 }
 void trocar(int*pa,int*pb){
     int temp ; 
