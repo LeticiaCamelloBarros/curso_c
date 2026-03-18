@@ -1,0 +1,8 @@
+int main()
+{
+char string1[] = "string" ;// {'s','t','r','i','n','g','\0'}
+char string2[7] = {'s','t','r','i','n','g','\0'};
+printf("string1 : %s",string1);
+printf("\n");
+printf("string2 : %s",string2);
+}
