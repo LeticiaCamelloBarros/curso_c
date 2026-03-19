@@ -11,8 +11,10 @@ Welcome to GDB Online.
 int main()
 {
 char A = 'A';
+//quando ele pega um character e tenta imprimi-lo como inteiro , ele vai printa-lo no formato hexadécimal do caracter
 printf("%d",A);
 printf("\n");
 int x = 65;
+//quando ele pega um inteiro e tenta imprimi-lo como inteiro , ele vai converter o número para a letra correspondente na tabela ASCII
 printf("%c",x);
 }
