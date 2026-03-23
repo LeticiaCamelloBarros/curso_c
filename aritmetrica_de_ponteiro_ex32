@@ -1,0 +1,19 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+int arr[] = {1,45,78};
+int i , *ptr;
+ptr = arr; //endereço de ptr é igual ao endereço do primeiro 
+//elemento do vetor arr 
+//pois o nome de um array é um ponteiro constante para o seu primeiro 
+//elemento , e não pode ser alterado 
+for (i=0;i<3;i++){
+    printf("adress of var = %p",ptr);
+    printf(" ");
+    printf("conteúdo do endereço do ponteiro = %d",*ptr);
+    printf("\n");
+    ptr ++;
+}
+
+}
