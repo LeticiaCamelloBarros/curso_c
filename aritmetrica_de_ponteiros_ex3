@@ -1,0 +1,15 @@
+#include <stdio.h>
+const int Max = 3;
+int main() {
+int var[] = {1,45,78};
+int i , *pvar;
+pvar = var;
+while (pvar<=&var[Max-1]){
+//"&var[Max-1]" é o endereço do valor do último endereço do vetor var
+printf("the value of var is %d",* pvar);
+printf(" | ");
+printf("the adress of var is %p",pvar);
+printf("\n");
+pvar ++;
+}
+}
