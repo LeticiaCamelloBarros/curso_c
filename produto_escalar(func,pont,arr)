@@ -1,0 +1,50 @@
+/*Escreva um programa em C que leia um inteiro n e, em seguida, leia os elementos de dois vetores
+inteiros de tamanho n. Crie uma função que calcule o produto escalar entre esses dois vetores.
+O produto escalar é definido como a soma dos produtos dos elementos de mesma posição:
+v1[0] * v2[0] + v1[1] * v2[1] + ... + v1[n-1] * v2[n-1]
+A função deve receber dois ponteiros para os vetores e o tamanho n, retornando o valor do produto
+escalar.
+Ex: int produtoEscalar(int *v1, int *v2, int n);*/
+#include <stdio.h>
+int produto_escalar(int *pv1,int * pv2,int *n);
+int main(){
+int n ;
+printf("qual o tamanho dos nossos vetores ? : ");
+printf("\n");
+printf("--------------------------------");
+printf("\n")
+scanf("%d",&n);
+int vet1[n],vet2[n];
+printf("digite os elementos do vetor 1:");
+//entra nor o loop for 
+for (int i = 0;i<n;i++){
+    int elemento ;
+    int e = i + 1 ;
+    printf("digite o valor do %d elemento",e);
+    scanf("%d",&elemento);
+    vet1[i] =elemento;
+}
+printf("--------------------------------");
+printf("\n");
+printf("digite os elementos do vetor 2:");
+printf("\n");
+for (int i = 0;i<n;i++){
+    int elemento ;
+    int e = i + 1 ;
+    printf("\n");
+    printf("digite o valor do %d elemento",e);
+    scanf("%d",&elemento);
+    vet2[i] =elemento;
+}
+printf("--------------------------------");
+//sai do loop for 
+int produto = produto_escalar(vet1,vet2,&n);
+printf("o produto escalar dos dois vetores é : %d",produto);
+}
+int produto_escalar(int * pv1,int * pv2,int *n){
+    int prod_esc = 0 ;
+    for (int i = 0;i<*n;i++){
+       prod_esc += ( pv1[i])*(pv2[i]);
+    }
+    return prod_esc;
+}
