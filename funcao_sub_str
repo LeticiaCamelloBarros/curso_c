@@ -1,0 +1,25 @@
+#include <stdio.h>
+char *procurar(char *string, char ch){
+
+while(*string !=ch && *string !='\0'){
+string++;
+}
+
+if(*string !='\0'){
+return string;
+}else{
+return NULL;
+}
+}
+int main()
+{
+char string[50] ;
+fgets(string,50,stdin);
+char ch = 'B';
+char *retorno = procurar(string, ch);
+if (retorno != NULL){
+    printf("%s",retorno);
+}else {
+    printf("caracter nao encontrado");
+}
+}
