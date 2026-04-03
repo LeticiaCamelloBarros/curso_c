@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+
+
+void printStr(char *str) {
+    //o que recebe um endereço é sempre um ponteiro 
+    printf("%s", str);
+}
+
+int main() {
+    char str[] = "GeeksforGeeks";
+    
+    // Passing string to a 
+    // function
+    //o nome de um array é o endereço do seu primeiro elemento
+    printStr(str);
+    return 0;
+}
