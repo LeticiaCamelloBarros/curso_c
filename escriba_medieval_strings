@@ -1,0 +1,34 @@
+
+#include <stdio.h>
+void conta_caracteres(char *string,int *vogais,int *consoantes);
+int main()
+{
+char string[50];
+printf("qual a sua string ?");
+fgets(string,50,stdin);
+int vogais = 0 ;
+int consoantes = 0 ; 
+conta_caracteres(string,&vogais,&consoantes);
+printf("numero de vogais: %d\n",vogais);
+printf("nuemro de consoantes: %d\n",consoantes);
+}
+void conta_caracteres(char *string,int *vogais,int *consoantes)
+{
+    while (*string !='\0')
+    {
+        if (*string == 'a' || *string == 'e' || *string == 'i' || *string == 'o' || *string == 'u')
+        {
+            *vogais = *vogais + 1 ;
+            string ++;
+        }
+       else if (*string>='a'&&*string<='z')
+       {
+           *consoantes = *consoantes + 1 ;
+           string ++ ;
+       }
+       else 
+       {
+           string ++ ;
+       }
+    }
+}
