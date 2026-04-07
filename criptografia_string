@@ -11,11 +11,28 @@ Exemplo:
 cifra_cesar("abc", 3) → "def".
 *******************************************************************************/
 #include <stdio.h>
-
-int main()
-{
-char letra = 'A';
-int valor = letra ;
-
-    printf("%d",valor);
+char *cifra_cesar(char *str,int deslocamento);
+int main(){
+char str[50];
+printf("digite a string : ");
+scanf("%s",str);
+int deslocamento;
+printf("digite o deslocamento");
+scanf("%d",&deslocamento);
+printf(cifra_cesar(str,deslocamento));
+}
+char *cifra_cesar(char *str,int deslocamento){
+    char *inicio = str;
+    //vai salvar num ponteiro o endereço original ( ou seja o endereço do inicio da string)
+    while (*str !='\0'){
+        int valor_ascii = *str ;
+        int new_asciivalue = valor_ascii + deslocamento;
+        char nova_letra = new_asciivalue;
+        *str = nova_letra;
+        str ++;
+    }
+    return inicio ;
+    //quando a questão falar em retomar ponteiro , está falando na vdd em retomar 
+    //o endereço desse ponteiro 
+    //vai retornar o incio da string 
 }
