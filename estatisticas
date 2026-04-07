@@ -1,0 +1,42 @@
+
+#include <stdio.h>
+void estatisticas (float v_temps[],int tam,float*media,float*maior,float*menor);
+int main()
+{
+    //inicio da main
+int tam ;
+printf("digite o tamanho do seu vetor");
+scanf("%d",&tam);
+float v_temps[tam];
+for (int i=0;i<tam;i++){
+   float x ;
+  printf("qual o valor da sua %d temperatura",i);    
+  scanf("%f",&x);
+ v_temps[i] = x ;
+}
+float nulo = 0.0 ;
+float media = nulo ;
+float maior = nulo ;
+float menor = v_temps[0] ;
+estatisticas(v_temps,tam,&media,&maior,&menor);
+printf("maior: %f",maior);
+printf("menor %f",menor);
+printf("media %f",media);
+//fim da main
+}
+void estatisticas (float v_temps[],int tam,float*media,float*maior,float*menor){
+    for(int i = 0;i<tam;i++){
+        if( v_temps[i] >= *maior){
+            *maior = v_temps[i];
+            *media += v_temps[i];
+
+        }else if ( v_temps[i] <= *menor){
+            *menor = v_temps[i];
+            *media += v_temps[i];
+
+        }else {
+*media += v_temps[i];
+        }
+    }
+    *media = *media / tam ;
+}
