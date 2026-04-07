@@ -1,0 +1,18 @@
+
+#include <stdio.h>
+int comprimento(char *string);
+int main()
+{
+char string[101];
+printf("digite a sua string :");
+fgets(string,101,stdin);
+printf("o comprimento da string é %d",comprimento( string));
+}
+int comprimento(char *string){
+    int tam = 0 ;
+    while (*string!='\0'){
+        tam ++;
+        string ++;
+    }
+    return tam;
+}
