@@ -1,0 +1,52 @@
+
+#include <stdio.h>
+#include <string.h>
+struct Aluno {
+char nome[50];
+float nota1;
+float nota2;
+float nota3;
+};
+int buscar_melhor_aluno(struct Aluno v_struct[],int n);
+ int main(){
+  int n ;
+  printf("digite o tamanho da nossa lista");
+  scanf("%d",&n);
+  struct  Aluno v_struct[n] ;
+  for (int i =0;i<n;i++){
+      getchar()
+      // pois antes do fgets teve um scanf;
+      char nome[50];
+      printf("qual o nome desse aluno  ? ");
+      fgets(nome,50,stdin);
+      float nota1;
+      printf("nota1:");
+      scanf("%f",&nota1);
+      float nota2;
+      printf("nota2");
+      scanf("%f",&nota2);
+      float nota3;
+      printf("nota3");
+      scanf("%f",&nota3);
+     strcpy( v_struct[i].nome ,nome ); 
+     v_struct[i].nota1 = nota1;
+     v_struct[i].nota2 = nota2;
+     v_struct[i].nota3 = nota3;
+  }
+  int indice = buscar_melhor_aluno(v_struct,n);
+  float media =( ( v_struct[indice].nota1 )+ (v_struct[indice].nota2) + (v_struct[indice].nota3 ))/3;
+  printf("nome do aluno com maior média é : %s",v_struct[indice].nome);
+  printf("media do aluno com maior média é %f",media);
+ }
+ 
+int buscar_melhor_aluno(struct Aluno v_struct[],int n){
+  float maior_media = 0;
+  int indice_m_media = 0;
+ for (int i =0;i<n;i++){
+     float media =(( v_struct[i].nota1 )+ (v_struct[i].nota2) + (v_struct[i].nota3 ))/3;
+     if( media > maior_media) {
+         maior_media = media ;
+         indice_m_media = i ;
+     } 
+ }  return indice_m_media;
+}
