@@ -1,0 +1,50 @@
+
+#include <stdio.h>
+#include <string.h>
+struct produto {
+    char nome[50];
+    float preco ;
+    int quantidade;
+//fim da struct 
+};
+int buscar_produto_mais_caro(struct produto v_struct[],int n);
+int main()
+{
+int n ;
+printf("quantos produtos você quer cadastrar ? :");
+scanf("%d",&n);
+struct produto v_struct[n];
+for (int i=0;i<n;i++){
+    getchar();
+    //para nao dar bo caso eu use no futuro fgets
+    char nome[50];
+    int posic = i +1 ;
+    printf("qual o nome do produto %d",posic);
+    fgets(nome,50,stdin);
+    strcpy(v_struct[i].nome,nome);
+    float preco ;
+    printf("qual o preço do produto %d",posic);
+    scanf("%f",&preco);
+    v_struct[i].preco = preco ;
+    int quantidade ;
+    printf("qual a quantidade do produto %d",posic);
+    scanf("%d",&quantidade);
+    v_struct[i].quantidade = quantidade; 
+}
+int indice = buscar_produto_mais_caro(v_struct ,n);
+printf("o produto mais caro é  %s:",v_struct[indice].nome);
+printf("o preço do produto mais ´caro é %f",v_struct[indice].preco);
+printf("a quantidade do produto mais caro é %d",v_struct[indice].quantidade);
+//fim da main
+}
+int buscar_produto_mais_caro(struct produto v_struct[], int n){
+    int indice_m_caro = 0 ;
+    float mais_caro = 0 ;
+    for (int i =0;i<n;i++){
+        if( v_struct[i].preco > mais_caro){
+            mais_caro = v_struct[i].preco;
+            indice_m_caro = i ;
+        }
+    }
+    return indice_m_caro ;
+}
