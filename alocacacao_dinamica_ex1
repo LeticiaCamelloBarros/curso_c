@@ -1,0 +1,36 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+//o problema de vetores e matrizes é que vc tem que declarar o tamanho dele de algum 
+//jeito .Com alocação dinâmica , vc pode requisitar memoria adicional durante a execução do pro-
+//grama , através de ponteiros.
+//
+int main()
+{
+int *numeros;
+int n , i ;
+printf("quantidade de números : ");
+scanf("%d",&n);
+numeros = malloc (n*sizeof(int));
+for (i=0;i<n;i++){
+    printf("núemro %d",i);
+    scanf("%d",&numeros[i]);
+}
+printf("numeros lidos ");
+for (i=0;i<n;i++){
+printf("%d",numeros[i]);
+printf("\n");
+free(numeros);
+}
+//as variáveis normais q vc declara, vc tem seus espaços reservados quando a função q vc declara 
+//e liberadas quando a função termina 
+//mas isso não acontece na allocação dinamica 
+//por isso dps que vc alloca dinamicamente vc precisa dar free
+}
