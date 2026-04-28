@@ -1,0 +1,12 @@
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+int main(){
+char *nome ;
+nome = (char *) malloc(22);
+// 21 espaços de memória do tipo char 
+printf("digite seu nome");
+fgets(nome,21,stdin);
+printf("%s\n",nome);
+
+}
