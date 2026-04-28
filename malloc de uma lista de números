@@ -1,0 +1,30 @@
+// Crie um programa que calcula a média de uma quantidade qualquer 
+// (informada pelo usuário) de números.
+// O programa deve armazenas esses números em um vetor.
+//  Depois, use esse vetor para mostrar a média dele.
+// Use alocação dinâmica de memória para colocar os números no vetor. 
+// Não desperdice memória.
+
+#include <stdio.h>
+#include <stdlib.h>
+// malloc é da biblioteca stdlib
+int main(){
+int qtd ;
+printf("quantos números você quer usar para calcular sua média ? ");
+scanf("%d",&qtd);
+int *vetor = (int*)malloc(sizeof(int)*qtd);
+//declarando um vetor dinâmicamente 
+for (int i =0;i<qtd;i++){
+    printf("diga um número aeh :");
+    scanf("%d",&vetor[i]);
+}
+int soma = 0 ;
+for (int i =0;i<qtd;i++){
+    soma += vetor[i];
+}
+float media = (float) soma /qtd;
+printf("a média desses números é : %f",media);
+free(vetor);  // liberar memória alocada
+
+
+}
