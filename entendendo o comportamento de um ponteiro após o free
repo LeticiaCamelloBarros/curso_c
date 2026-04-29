@@ -1,0 +1,16 @@
+# include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int* px =(int*)malloc(sizeof(int)) ;
+    *px = 100 ;
+    printf("value %d at adress %p",*px,px);
+    //nesse print o *px exibirá o valor 100
+    free(px);
+    //libera o espaço do endereço de px 
+    printf("\n");
+    printf("value %d at adress %p",*px,px);
+    //nesse print o *px exibirá terá comportamento indefinido : ou 100, ou lixo , ou o codigo
+    //será corrompido .
+
+
+}
