@@ -1,0 +1,21 @@
+# include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int* px =(int*)malloc(sizeof(int)) ;
+    *px = 100 ;
+    printf("value %d at adress %p",*px,px);
+    //nesse print o *px exibirá o valor 100
+    free(px);
+    //libera o espaço do endereço de *px , mas px continua existindo 
+    //e apontando para o mesmo endereço. E se você tentar manipular *px vai dar
+    //comportamento indefinido .
+    // Liberar espaço == você não tem mais o direito de usufruir daquele espaço 
+    //então para resolver esse problema precisaremos liberar o ponteiro também 
+    px = NULL ;
+    //pronto agora , px agora aponta para o endereço 0x000000000 , ou seja NULL
+    //nesse caso ele sempre se comportará igual , então não tem nem o p do perigo do
+    //seu código quebrar em algumas execuções e executar em outras 
+    printf("value %d at adress %p",*px,px);
+    //agora o px será 0x0000000 e o *px dará  segmetation fault 
+    //em todas as execuções 
+}
