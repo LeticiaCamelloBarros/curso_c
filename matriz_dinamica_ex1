@@ -1,0 +1,47 @@
+# include <stdlib.h>
+# include <stdio.h>
+
+int main(){
+int n ;
+int m ;
+printf("digite um valor para n:");
+//n é o nosso i , ou seja as linhas 
+scanf("%d/n",&n);
+printf("digite um valor para m:");
+//m é o nosso j , ou seja as colunas 
+scanf("%d/n",&m);
+
+//agora vai se alocar um ponteiro para ponteiro usando o valor de linhas 
+int **matriz = (int **)calloc(n,sizeof(int*));
+//como é calloc e não malloc , cada byte do bloco alocado incializará com o valor 0.
+if (matriz == NULL ){
+    printf("erro ao alocar a matriz de ponteiros ");
+}
+for(int i =0;i<n;i++){
+    //agora vamos percorrer as linhas ;
+    // a cada linha da matriz vamos alocar um espaço para m colunas 
+    matriz[i] = (int *)calloc(m,sizeof(int));
+}
+int valor = 0;
+for (int i=0;i<(n);i++){
+   for(int j=0;j<(m);j++){
+     matriz[i][j] = valor ++;
+   }
+}
+//agora para imprimir  os elementos da matriz , vamos percorrer a matriz 
+//assim como se faz com alocação estática . 
+ // Imprime a matriz
+    printf("\nMatriz %d x %d:\n", n, m);
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            printf("%4d", matriz[i][j]); // %4d alinha as colunas
+        }
+        printf("\n");
+    }
+
+for (int i =0;i<(n);i++){
+    //limpe de fora para dentro : matriz[i] --> matriz
+    free(matriz[i]);
+}
+free(matriz);
+}
