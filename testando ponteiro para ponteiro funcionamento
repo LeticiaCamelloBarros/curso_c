@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+void inicializar(int **X){
+    *x=(int*)malloc(sizeof(int));
+}
+int main()
+{
+int *a ;
+printf("%d",*a);
+inicializar(&a);
+printf("%d",*a);
+*a = 3;
+printf("%d",*a);
+}
